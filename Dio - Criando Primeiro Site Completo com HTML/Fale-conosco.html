@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Pediatra - Fale conosco</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <p><a href="Início.html">Início</a></p>
+            <p><a href="Sobre-a-clinica.html">Sobre a clínica</a></p>
+            <p><a href="Atendimentos.html">Atendimentos</a></p>
+            <p><a href="Fale-conosco.html">Fale conosco</a></p>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <img src="https://i.pinimg.com/originals/2b/9a/45/2b9a455028b535467b5c6333b80a6bca.png" width="150" alt="Logo Dr. Pediatra">
+                <h1 class="title"> Dr. Pediatra</h1>
+            </div>
+    
+            <div class="content">
+                <h2>Fale conosco</h2>
+                <p>Entre em contato com a nossa equipe para tirar dúvidas, fazer reclamações ou elogiar nossa equipe.</p>
+                <form name="Contato" autocomplete="off" action="#" method="post" onsubmit="alert ('Formulário enviado');">
+                    <p><label>Nome: </label><input type="text"  name="Nome"></p>
+                    <p><label>E-mail: </label><input type="email" name="E-mail"></p>
+                    <p><label>Tipo de contato: </label>
+                        <input type="radio" name="assunto" value="Duvida">Dúvida
+                        <input type="radio" name="assunto" value="Reclamação">Reclamação
+                        <input type="radio" name="assunto" value="Elogio">Elogio
+                    </p>
+                    <label>Assunto: </label><input type="text" name="Assunto">
+                    <p><label>Mensagem:</label><br><textarea name="Mensagem" id="Mensagem" cols="60" rows="15"></textarea></p>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </form>
+            </div>
+    
+            <div class="footer">
+                <h3>Dr. Pediatra</h3>
+                <p><strong>Endereço:</strong> Rua Maria Olinda, 1022, Repouso - São Paulo, SP</p>
+                <p><strong>Telefone:</strong> (11) 2XXX-XXXX</p> 
+                <p><strong>Atendimento mediante agendamento!</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

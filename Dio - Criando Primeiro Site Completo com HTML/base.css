@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+}
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    background-color: rgb(136, 255, 233);
+}
+.main {
+    display: flex;
+    flex-flow: column;
+    width: 85%;
+}
+.menu {
+    width: 10%;
+    background-color: rgb(175, 243, 220);
+    padding: 100px 30px 0px;
+}
+.header {
+    display: grid;
+    background-color: rgb(109, 253, 205);
+    max-height: 150px;
+}
+
+.title {
+    position: relative;
+    margin-top: -80px;
+    margin-left: 160px;
+    font-size: 62px;
+    color: rgb(4, 4, 4);
+}
+
+.content {
+    background-color: rgb(09, 253, 205);
+    min-height: 300px;
+    padding: 20px;
+}
+
+.table {
+    border: solid 1px rgb(15, 156, 125);
+}
+
+.thead {
+    background-color: rgb(252, 252, 252);
+}
+
+.tbody {
+    background-color: rgb(242, 242, 211);
+}
+.footer {
+    padding-left: 15px;
+    background-color: rgb(109, 253, 205);
+    min-width: 150px;
+    max-height: 200px;
+}

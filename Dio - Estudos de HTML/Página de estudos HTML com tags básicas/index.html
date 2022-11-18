@@ -14,11 +14,18 @@
         <li><a href="#O-que-é-HTML">O que é HTML?</a></li>
         <li><a href="#Estrutura-básica-de-documento">Estrutura básica de um documento .html</a></li>
         <li><a href="#Algumas-tags-e-atributos">Algumas tags e atributos</a></li>
-        <li><a href="#Referencias"> Referências</a></li>
+        <li><a href="#Formulários">Criando um formulário em HTML</a></li>
+        <li><a href="#Estrutura-formatação">Estruturando o HTML e formatações</a></li>
+        <li><a href="#Mídias">Trabalhando com mídias</a></li>
+        <li><a href="#Tabelas">Criando tabelas</a></li>
+        <li><a href="#Notas">Notas</a></li>
+        <li><a href="#Referencias">Referências</a></li>
     </ol>
+    
     <h2 id="O-que-é-HTML"> O que é HTML? <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
     <p>HyperText Markup Language (HTML) é uma linguagem de marcação de texto utilizada na construção de página WEB. Como um componente WEB básico, permite a inserção de conteúdo e estabelece uma estrutura básica para um website. Portanto, pode ser considerada um "esqueleto" do website, servido para dar significado e organização para suas informações.</p>
     <p><mark>Não é uma linguagem de programação!</mark></p>
+    
     <h2 id="Estrutura-básica-de-documento">Estrutura básica de um documento .html <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
     <p>Este tipo de documento apresenta a seguinte estrutura:</p>
     <ul>
@@ -26,47 +33,135 @@
         <li>Body (ou <i>corpo do texto</i>), que são os conteúdos do documento que serão lido pelo navegador e apresentados à pessoa usuária.</li>
         <li>Tags (ou <i>elementos</i>), que são um conjunto de estruturas que se conectam entre si dentro de uma página WEB.São utilizados para informar o navegador o tipo de estrutura que está sendo construida, podendo ser um título, parágrafo, imagens, links, citações, etc.</li>
         <ul>
-            <li>É formada por sinal de menor que (<) + nome do elemento + sinal de maior que (>) =  < nomedoelemnto ><sup>*</sup></li>
+            <li>É formada por sinal de menor que (<) + nome do elemento + sinal de maior que (>) =  < nomedoelemnto ><sup>1</sup></li>
             <li><strong>OBS:</strong> Para fechar, inclui / (barra) após o sinal de menor que (<).</li>
         </ul> 
         <li>Atributos são palavras especiais que funcionam como modificadores de elementos e são utilizados dentro das tags para conferi-lhes algum tipo de comportamento.</li>
     </ul>
-    <p><small>* Retire os espaços para validar as tags.</small></p>
     <p>Abaixo, um exemplo de estrutura de um documento .html:</p>
     <img src="http://colinhas.herokuapp.com/maria-fernanda/img/htmlbasic.png" height="450" alt="Cheat Sheets HTML">
     <p>onde as tags:</p>
     <ul>
-        <li><strong>html</strong> representam o inicio e o fim do documento html que será lido pelo navegador;</li>
-        <li><strong>head</strong> representam o inicio e fim do cabeçalho;</li>
+        <li><b>html</b> representam o inicio e o fim do documento html que será lido pelo navegador;</li>
+        <li><b>head</b> representam o inicio e fim do cabeçalho;</li>
         <ul>
-            <li><strong>meta</strong> representa os metadados do documento;</li>
-            <li><strong>title</strong> representa o título da página no navegador.</li>
+            <li><b>meta</b> representa os metadados do documento;</li>
+            <li><b>title</b> representa o título da página no navegador.</li>
         </ul>
-        <li><strong>body</strong> representa o inicio e fim do corpo do texto;</li>
+        <li><b>body</b> representa o inicio e fim do corpo do texto;</li>
     </ul>
+   
     <h2 id="Algumas-tags-e-atributos">Algumas tags e atributos <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
-    <p>Para além das tags estruturais apontadas<sup>**</sup> acima, temos muitas outras, como:</p>
+    <p>Para além das tags estruturais apontadas<sup>2</sup> acima, temos muitas outras, como:</p>
     <ul>
-        <li><i>h1 até h6</i> para hierarquias de títulos;</li>
-        <li><i>p</i> para parágrafos;</li>
-        <li><i>ol + li</i> para listas ordenadas;</li>
-        <li><i>ul + li</i> para listas não ordenadas;</li>
-        <li><i>mark</i> para marcação de texto;</li>
-        <li><i>small</i> para definir texto menores</li>
-        <li><i>i</i> para italico;</li>
-        <li><i>u</i> para sublinado;</li>
-        <li><i>strong</i> para negrito;</li>
-        <li><i>a</i> para ancoragem/inserção de links no texto;</li>
-        <li><i>hr</i> para delimitação de conteudos;</li>
-        <li><i>sub</i> para texto subescritos;</li>
-        <li><i>sup</i> para textos superescritos;</li>
-        <li><i>blockquote</i> para destacar citações;</li>
-        <li><i>del</i> para definir um texto que foi deletado de um documento;</li>
-        <li><i>abbr</i> para definir uma abreviação ou acrônimo.</li>
+        <li><b>h1 até h6</b> para hierarquias de títulos;</li>
+        <li><b>p</b> para parágrafos;</li>
+        <li><b>ol</b> para listas ordenadas, onde <b>li</b> é uma tag-filha;</li>
+        <li><b>ul</b> para listas não ordenadas, onde <b>li</b> é uma tag-filha;</li>
+        <li><b>a</b> para ancoragem/inserção de links no texto;</li>
+        <li><b>hr</b> para delimitação de conteudos;</li>
+        <li><b>del</b> para definir um texto que foi deletado de um documento;</li>
+        <li><b>abbr</b> para definir uma abreviação ou acrônimo.</li>
     </ul>
-    <p><small>** Segue o modelo de tags descritos anteriormente.</small></p>
     <p>Outras tag podem ser encontradas em <a href="https://www.w3schools.com/tags/default.asp" target="_blank">W3Schools</a>.</p>
     <p>Para acessar uma lista de atributos, consulte <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">W3Schools</a> também.</p>
+    
+    <h2 id="Formulários">Criando formulários em HTML <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
+    <p> Para a criação de formulários através de HTML, utiliza-se as seguintes tags:<sup>3</sup></p>
+    <ul>
+        <li><b>form</b> para iniciar um formulário (funciona como a tag html);</li>
+        <li><b>input</b> para inserir um campo de preenchimento. Com o atributo type, podem ser inseridos as seguintes informações.</li>
+        <ul>
+            <li><b>text</b> para digitar texto;</li>
+            <li><b>number</b> para digitar numeros</li>
+            <li><b>button</b> para criar um botão;</li>
+            <li><b>range</b> para criar uma escala;</li>
+            <li><b>password</b> para inserir uma senha;</li>
+            <li><b>color</b> para selecionar uma cor;</li>
+            <li><b>e-mail</b> para inserir um endereço de e-mail;</li>
+            <li><b>url</b> para inserir uma url;</li>
+            <li><b>date</b> para incluir uma data;</li>
+            <li><b>file</b> para anexar um arquivo;</li>
+            <li><b>hidden</b> para esconder um campo</li>
+            <li><b>search</b> para incluir um campo de busca, porém só funciona no Chrome;</li>
+            <li><b>checkbox</b> para selecionar muitas opcões;</li>
+            <li><b>radio</b> para selecionar um única opção.</li>
+        </ul>
+        <li><b>br</b> para quebrar/break linha;</li>
+        <li><b>label</b> para apresenta uma legenda para um item, como um campo de preenchimento;</li>
+        <li><b>button</b> para cria um botão de ação;</li>
+        <ul>
+            <li><b>button</b> para criar um botão simples, que poderá ser personalizado depois;</li>
+            <li><b>reset</b> para limpar os campos que estão dentro do formuláio;</li>
+            <li><b>submit</b> para enviar o formulário.</li>
+        </ul>
+        <li><b>select</b> para inserir um campo com valores pré-definidos. Precisa de uma tag-filha chamada <i>option</i> para apresentar as opções de seleção pré-definidas ao usuário.</li>
+        <li><b>textarea</b> para inserir um texto com várias linhas, como mensagens, comentários, etc.</li>
+    </ul>
+    
+    <h2 id="Estrutura-formatação">Estruturando o HTML e formatações <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
+    <p>Para formatar alguns documentos considerando-se também a acessibilidade, é válido revisar algumas tags e aprender como utilizar outras. </p>
+    <ul>
+        <li>Para textos, temos:</li>
+        <ul>
+            <li><b>i</b> para itálico; </li>
+            <li><b>strong</b> para negrito, enfatizando semanticamente o texto, o que facilita acessibilidade para pessoas com deficiência visual (visualmente é igual ao b); </li>
+            <li><b>b</b> para negrito simples, sem reforço semantico (visualmente é igual ao strong);</li>
+            <li><b>u</b> para sublinhado;</li>
+            <li><b>mark</b> para marcar o texto; </li>
+            <li><b>sup</b> para elevar um texto;</li>
+            <li><b>sub</b> para rebaixar um texto; </li>
+            <li><b>blockquote</b> para delimitar um espaço de citação;</li>
+            <li><b>small</b> para definir texto menores;</li>
+            <li><b>font</b> para formatação de tipografia, precisando obrigatoriamente de atributos como <i>face e color</i> para funcionar. Incluir mais de uma opção de fonte tipográfica pode auxiliar na acessibilidade. É uma tag que está caindo em desuso por conta do CSS.</li>
+        </ul>
+        <li><b>div</b> para particulionar horizontalmente o contéudo, auxiliando na arquitetura da página (blocado); </li>
+        <li><b>span</b> para particiona um contéudo especifico, facilitando sua customização (não-blocado); </li>
+        <li><b>fieldset</b> para agrupa campos de formulário, criando linhas e legendas ao agrupamento.</li>
+        <li><b>embed</b> para plugar um conteúdo externo ao seu site. Não é mais utilizada, pois semanticamente perdeu força para outras tags como video.</li>
+        <li><b>iframe</b> para permite abrir uma janela na sua página com contéudo de outra página, permitindo carregar sites inteiros dentro do seu site. <br> <mark>Pode afetar a segurança do site. Estudar implementação via JavaScript.</mark></li>
+    </ul> 
+    <p><b>Sobre cores:</b></p>
+    <p>Existem algumas formas diferentes de programar cores, dependendo dos navegadores.</p>
+    <ul>
+        <li>nomes</li>
+        <li>hexadecimal</li>
+        <li>RGB</li>
+        <li>HLS</li>
+        <li>RGBA</li>
+        <li>HLSA</li>
+    </ul>
+    
+    <h2 id="Mídias">Trabalhando com mídias <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
+    <p>Tags de mídia são tags voltadas para inclusão de imagens e/ou sons no seu documento. As mais comuns podem ser vistas abaixo.</p>
+    <ul>
+        <li><b>img</b> para incluir imagens. Se atentar as extensões dos arquivos de imagens, pois isso pode impactar na resolução e no carregamento de páginas. Recomenda-se usar a tag sgv para adicionar arquivos vetoriais com esta mesma extensão. Para aumentar a acessibilidade do seu site, incluia o atributo alt para incluir uma descrição detalhada de todas as imagens.</li>
+        <li><b>audio</b> para incluir audios. Definições de design de players são nativas do navegador, podendo ser incluidos os controles pelos atributo controls. Precisa da tag-filha <i>source</i> para funcionar. Adicione uma mensagem ao usuário para que ele seja avisado caso o navegador dele não suporte a mídia.</li>
+        <li><b>video</b> para incluir videos. Mesma situação que a tag audio. Recomenda-se adicionar videos com diferentes extensões para oferecer varias opções de execução ao navegador.</li>
+        <li><b>track</b> é uma tag auxiliar da tag video e serve para incluir legendas nos seus videos. Tag recomendada para aumentar a acessibilidade do documento.</li>
+        <li><b>iframe</b> para incorporar páginas externas ao seu site.</li>
+    </ul>
+    
+    <h2 id="Tabelas">Criando tabelas <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
+    <p>Tabelas são uma forma de apresentação de dados composta por linhas e colunas. A intersecção de linhas e colunas compõem uma célula. As tags referentes a tabela são:</p>
+    <ul>
+        <li><b>table</b> para incluir uma tabela no seu documento. Precisa de tags auxiliares.</li>
+        <ul>
+        <li><b>tr</b> para incluir linhas na tabela.</li>
+        <li><b>td</b> para incluir colunas.</li>
+        <li><b>th</b> para definir um cabeçalho para uma tabela. Facilita na acessibilidade eu endereçar cada informação de acordo com sua localização na tabela.</li>
+        <li><b>tbody</b> para agrupar células que serão o corpo da tabela. Facilita na organização do documento e no desenvolvimento de uma lógica posterior implementada por uma linguagem de programação.</li>
+        <li><b>thead</b>para agrupar células que serão o cabeçalho da tabela. Facilita na organização do documento e no desenvolvimento de uma lógica posterior implementada por uma linguagem de programação.</li>
+        <li><b>tfoot</b>para agrupar células que serão o corpo da tabela. Facilita na organização do documento e no desenvolvimento de uma lógica posterior implementada por uma linguagem de programação.</li>
+        <li><b>caption</b> para criar uma descrição para uma tabela que será visível ao usuário. Pode ser lida pelo leitor de tela. É diferente do atributo summary pois este ultimo não fica exposto ao usuário, mas também é lido pelo leitor de tela e pode conter mais informações.</li>
+        </ul>
+    </ul>
+
+    <h2 id="Notas">Notas <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
+    <p><small>1 Retire os espaços para validar as tags.</small></p>
+    <p><small>2 Segue o modelo de tags descritos anteriormente.</small></p>
+    <p><small>3 Utilize atributos para definir melhor cada campo do seu formulário. <br> Consultar <i>name, type, actin, method, target, autocomplete, onsubmit, min, max, step, value, multiple, disabled, rows, cols etc</i> nas referencias abaixo.</small></p>
+    
     <h2 id="Referencias">Referências <small><small><small><a href="#inicio">(Voltar)</a></small></small></small></h2>
     <p><a href="https://pt.m.wikipedia.org/wiki/HTML" target="_blank">Wikipédia</a></p>
     <p><a href="https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-1-estrutura-basica" target="_blank">Alura - Estrutura</a></p>
