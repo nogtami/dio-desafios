@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de CSS</title>
+</head>
+<body>
+    <h1>Estudos de CSS</h1>
+    <hr>
+    <p>
+        Este documento tem como objetivo organizar meus aprendizados sobre CSS e seus dialogos com html para a criação de aplicações Web. 
+        Tais aprendizados foram realizados no Curso de Fundamentos do CSS, oferecido pela Dio.me.
+    </p>
+        <ul>
+            <li><a href="#O-que-e-CSS">O que é CSS?</a></li>
+            <li><a href="#Seletores">Seletores</a></li>
+            <li><a href="#Combinadores">Combinadores</a></li>
+            <li><a href="#Propriedades-de-dimensionamento-e-espacamento">Propriedade de dimensionamento e espaçamento</a></li>
+        </ul>
+
+    <h2 id="#O-que-e-CSS">O que é CSS?</h2>
+    <p><strong>Cascating Style Sheets (ou Folha de Estilo em Cascata)</strong> é um mecanismo para adicionar estilos para um documento Web (html).</p>
+    <ul>
+        <li>
+            Criado por Hakon Wium Lie em 1994 para facilicar na programação de sites. 
+            Atualmente está na sua versão CSS3.
+        </li>
+        <li>Ele determina como vai ser o layout de uma pagina e como os seus elementos devem ser.</li>
+        <li>Permite controlar o estilos de várias páginas html com um só documento CSS.</li>
+        <li>Permite criar layout simples com poucos códigos.</li>
+        <li>
+            Apresenta um conceito flexivel que permite criar não somente aplicações web, 
+            mas também para aplicativos móveis através de bibliotecas/frameworks.
+        </li>
+    </ul>
+    <p>
+        Não é uma linguagem de programação e nem de marcação. 
+        <mark>O CSS é uma linguagem de estilos</mark>
+    </p>
+    <p>Combinado com o HTML, permite a criação de:</p>
+    <ul>
+        <li>Layout e estilizações de página web;</li>
+        <li>Animações;</li>
+        <li>Formas geometricas e desenhos;</li>
+        <li>Filtros;</li>
+        <li>Contadores.</li>
+    </ul>
+    <h3>O que são propriedades e valores?</h3>
+    <p>
+        <b>Propriedades</b> são características de um elemento do nosso HTML (cor de fundo, largura, altura, espaçamento...). 
+        <b>Valores</b> definem o resultado de uma propriedade e como o navegador deve exibir o estilo daquele elemento. 
+        Deve ser exibido da seguinte forma: <mark>Propriedade: valor</mark>, como <i>color: red</i> ou <i>background: green.</i>
+    </p>
+    <h3>Formas de declarar o CSS</h3>
+    <ul>
+        <li>
+            <b>CSS Inline:</b> adiciona o código CSS utilizando o atributo style dentro das tags HTML, elemento por elemento.
+            <ul>
+                <li>
+                Não é recomendada por dificultar padronização de elementos e exigir muito esforço em caso de modificação 
+                (necessidade de corrigir elementos um por um).
+                </li>
+                <li>
+                    Pode ser vantagoso para modificar estilos em documentos HTML que você não possua acesso 
+                    ou que você precisa subescrever estilos aplicando em algum outro documento CSS.
+                </li>
+                <li>Pode ser vantajoso para testar e visualizar alterações de estilo de forma rápida na nossa página.</li>
+                <li>Diminui solicitações HTTP porque não precisa fazer download de um arquivo CSS externo. 
+                    Já está embutido no HTML.
+                </li>
+            </ul> 
+        </li>
+        <br>
+        <li>
+            <b>CSS Interno:</b> adiciona o código CSS dentro da tag <i>head</i> do HTML, 
+            a qual adicionamos a tag <i>style</i> e colocamos as regras CSS nesta área.
+            <ul>
+                <li>
+                    Facilita a velocidade de carregamento do site porque o CSS está embutido no mesmo arquivo HTML.
+                </li>
+                <li>
+                    Não é possivel reaproveitar este código de estilos em outras páginas HTML, 
+                    o que dificulta a manutenção da página e a utilização inteligente dos estilos.
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>CSS Externo:</b> é criado um arquivo com a extensão .css com todas as regras do CSS que queremos implementar. 
+            Este arquivo é referenciado no HTML da página através da tag link adicionada ao head do arquivo HTML.
+            <ul>
+                <li>Como boa prática, mantém o arquivo CSS numa página chamada "assets".</li>
+                <li>Facilita a padronização de estilos de multiplas páginas.</li>
+                <li>Facilita o processo de manutenção do site e torna o processo de desenvolvimento do seu código mais produtivo.</li>
+                <li>Mantém as paginas HTML menores e com estruturas mais limpas e organizadas.</li>
+                <li>Velocidade de carregamento de todas as páginas HTML é mais rápida.</li>
+                <li>
+                    Como desvantagem, pode haver um delay no carregamento de estilos das paginas HTML referenciadas, 
+                    pois necessita do download de estilos de um arquivo externo.
+                    Em outras palavras, pode ser que haja uma diferença pequena no carregamento dos seus arquivos HTML e CSS, 
+                    o que pode deixar sua página sem estilos por alguns instantes.
+                    Depende da conexão do usuário e pode ser minimizado.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Depurando o CSS</h3>
+    <p>
+        O processo de depuração (ou <i>debug</i>) é uma forma de identificar problemas no código-fonte de uma aplicação e entender seu comportamento. <br>
+        Todos os navegadores possuem uma ferramenta chamada <b>Dev Tools</b> que permite que desenvolvedores possam examinar nossos sites, 
+        requisições para recursos externos, etc. <br>
+        Esta ferramenta pode <u>(e deve!)</u> se utilizada para o desenvolvimento das nossas aplicações web para 
+        que possamos visualizar as configurações do nosso códigos e como ele se comporta em diferentes dispositivos. 
+        Também é possível realizar edições temporárias que ajuda na visualização de algumas modificações 
+        e como os elementos se adequam a elas.
+    </p>
+    
+    <h2 id="#Seletores">Seletores</h2>
+    <p>
+        No CSS, há os <i>seletores</i>, que são indicadores que definem em quais elementos serão aplicadas as propriedades e valores estabelecidos para estilizar o arquivos HTML. <br>
+        São eles: 
+    </p>
+    <ul>
+        <li>
+            <b>Seletor de Tag (ou Tipos),</b> que busca elementos por uma tag HTML especifica;
+        </li>
+        <br>
+        <li>
+            <b>Seletor de ID (#),</b> que busca os elementos pelo atributo <i>id</i>;
+            <ul>
+                <li>Não pode repetir o mesmo nome para diferentes id. É como uma impressão digital dentro do nosso código.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Seletor de Class (.),</b> que busca elementos através do atributo <i>class</i>;
+            <ul>
+                <li>
+                    Class é um atributo que classifica grupos de elementos. 
+                    Então, tags diferentes podem ter atributos class com o mesmo nome.
+                </li>
+                <li>Pode selecionar uma ou mais classes.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Seletor Universal (*),</b> que seleciona todos os elementos HTML;
+        </li>
+        <br>
+        <li>
+            <b>Seletor de Atributo ([atrib]),</b> que seleciona elementos que possuem um atributo especifico no nosso HTML 
+            e também busca atributos com um valor especifico.
+            <ul>
+                <li>Modifica todos os atributos identicos quando colocado como [atrib];</li>
+                <li>Modifica todos os atributos de mesmo valor quando colocado [atrib=value];</li>
+                <li>Modifica atributos por palavra-chave quando colocado [atrib~=value];</li>
+                <li>Modifica atributos por palavras isoladas ou com hifen quando colocado [atrib|=value];</li>
+                <li>Modifica atributos por prefixos quando colocado [atrib^=value];</li>
+                <li>Modifica atributos por sufixos quando colocado [atrib$=value];</li>
+                <li>Modifica atributos com valor localizado em qualquer parte quando colocado [atrib*=value].</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 id="#Combinadores">Combinadores</h2>
+    <p>Podemos aglutinar regras de CSS de algumas formas.</p>
+    <ul>
+        <li>
+            <b>Agrupadores de seletores:</b>
+            Podemos aplicar as mesmas regras CSS para vários seletores diferentes. 
+            Para isso, podemos separar os seletores utilizando uma vírgula (,).
+            Assim não é necessário ficar copiando e colando os mesmos códigos para todos. 
+            Basta fazer um só bloco de CSS utilizando as mesmas regras. 
+            <ul>
+                <li>A virgula funciona semanticamente como um "ou".</li>
+                <li>
+                    Para juntar seletores criando uma condição de adição, aglutinamos seletores sem espaços e vírgulas. br
+                    Semanticamente, estamos definindo que a regra CSS vai funcionar se aquele elemento for/tiver uma condição 
+                    <b><u>e</u></b> outra.
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Combinador Descendente:</b> 
+            Busca por todos os elementos inseridos numa tag maior. Separa-se por espaço ( ). <br>
+            <mark>Exemplo:</mark> li li para alterar estilos dentro de subitens.
+        </li>
+        <br>
+        <li>
+            <b>Combinador Filho:</b>
+            Busca por elementos desejados que são filhos diretos do elemento que queremos modificar.
+            Separa-se por maior que (>). <br>
+            <mark>Exemplo:</mark> div > p vai modificar só os paragrafos que estão relacionados diretamente com div.
+        </li>
+        <br>
+        <li>
+            <b>Combinador Irmão adjacente:</b>
+            Busca por elemento que está diretamente ao lado de outro.
+            Separa-se por mais (+). <br>
+            <mark>Exemplo:</mark> div + p vai modificar só paragrafos que estão diretamento ao lado de div.
+        </li>
+        <br>
+        <li>
+            <b>Combinador Irmão em geral:</b>
+            Busca por todos os elementos irmão a outros, independente de estarem aos lado deste.
+            Separa-se por til (~). <br>
+            <mark>Exemplo:</mark> div ~ p vai modificar todos os paragrafos que são irmão de div.
+        </li>
+    </ul>
+
+    <h2 id="#Propriedades-de-dimensionamento-e-espacamento">Propriedade de dimensionamento e espaçamento</h2>
+    <p>
+        Conhecendo um pouco sobre as principais caracteristicas e indicadores do CSS, 
+        pode-se aprofundar um pouco mais em algumas propriedades e valores que esta linguagem de estilos oferece.
+    </p>
+    <ul>
+        <li>
+            <b>Propriedades de dimensionamento:</b>
+            São propriedades responsaveis por alterar o tamanho dos elementos (largura ou altura). 
+            No CSS, há várias unidades de medidas que podem ser utilizadas para determinar os valores das propriedades de dimensionamento.
+            <ul>
+                <li><b>width:</b> para alterar a largura;</li>
+                <li><b>height:</b> para alterar a altura;</li>
+                <li><b>min-width</b> para definir uma largura minima a um elemento;</li>
+                <li><b>max-width</b> para definir uma largura máxima a um elemento;</li>
+                <li><b>min-height</b> para definir uma altura minima a um elemento;</li>
+                <li><b>max-height</b> para definir uma altura máxima a um elemento.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Propriedades de espaçamento:</b>
+            São propriedades responsaveis por definir e alterar os espaçamentos dos e entre os elementos HTML.
+            <ul>
+                <li>
+                    <b>margin:</b> cria um espaçamento em volta dos elementos. (Espaçamento externo)
+                    <ul>
+                        <li>Pode ser trabalhado de forma geral (margin) ou por cada uma de suas laterais (top, left, right ou bottom);</li>
+                        <li>Pode ser aplicados valores positivos e negativos;</li>
+                        <li>Correspondencia de definições com um: todos os quatro lados terão o mesmo tamanho;</u></li>
+                        <li>Correspondencia de definições com dois valores: <u>cima/baixo</u> e <u>laterais</u>;</li>
+                        <li>Correspondencia de definições com três valores: <u>cima</u>, <u>lados</u> e <u>embaixo</u>;</li>
+                        <li>Correspondencia de definições com quatro valores: <u>cima</u>, <u>direita</u>, <u>embaixo</u> e <u>esquerda.</u></li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <b>padding:</b> cria um espaçamento entre os conteudos e bordas de um elemento. (Espaçamento interno)
+                    <ul>
+                        <li>Pode ser trabalhado de forma geral (padding) ou por cada uma de suas laterais (top, left, right ou bottom);</li>
+                        <li>Pode ser aplicados valores positivos e negativos;</li>
+                        <li>Correspondencia de definições com um: todos os quatro lados terão o mesmo tamanho;</u></li>
+                        <li>Correspondencia de definições com dois valores: <u>cima/baixo</u> e <u>laterais</u>;</li>
+                        <li>Correspondencia de definições com três valores: <u>cima</u>, <u>lados</u> e <u>embaixo</u>;</li>
+                        <li>Correspondencia de definições com quatro valores: <u>cima</u>, <u>direita</u>, <u>embaixo</u> e <u>esquerda.</u></li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <b>box-sizing:</b> estabelece criterios e limitações de altura e largura para os elementos.
+                    Possui dois valores:
+                    <ul>
+                        <li><b>content-box:</b> comportamento padrao que adiciona espaço ao calcular largura = conteudo + borda + padding;</li>
+                        <li>
+                            <b>border-box:</b> comportamento que redimensiona o elemento readequando o conteudo aos limites da borda, 
+                            calculando largura = borda + padding.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

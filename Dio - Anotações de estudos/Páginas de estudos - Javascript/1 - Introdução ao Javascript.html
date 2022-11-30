@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JavaScript</title>
+</head>
+<body>
+    <h1>Estudo de JavaScript</h1>
+    <hr>
+    <p>Como visto anteriormente em outros cursos, um site é formado por vários elementos que desempenham diferentes funções.</p>
+    <ul>
+        <li>HTML é uma linguagem de marcação que confere significado ao conteudo de um site, funcionando como seu esqueleto.</li>
+        <li>CSS é uma linguagem de estilos que permite estilização aos conteudos de um site, dando-lhe sua aparência final.</li>
+        <li>JavaScript é uma linguagem de programação que confere comportamento aos conteudos de um site, permitindo-lhe executar ações.</li>
+    </ul>
+    <p>
+        Para realizarmos um teste de como podemos utilizar o JavaScript, usaremos o "Olá, mundo!" para 
+        inserir uma mensagem via JavaScript no nosso HTML, que pode ser vista abaixo.
+    </p>
+
+    <h5></h5>
+
+    <h2>Fundamentos da linguagem JavaScript</h2>
+    <p>Para programarmos em JavaScript, precisamos primeiro dominar seus fundamentos.</p>
+    <ul>
+        <li>
+            <b>Variaveis:</b> são espaços na são espaços na memória do computador onde você pode armazenar 
+            dados. Você começa declarando uma variável com a palavra-chave var (menos recomendado) ou a palavra 
+            chave let, seguida por qualquer nome que você queira chamá-la.
+            <ul>
+                <li>Para declarar uma variavel, use a estrutura let minhavariavel; (sendo o ponto-e-virgula simbolo de finalização das instruções em JavaScript).</li>
+                <li>Depois de declarar uma variavel, pode-se atribuir a ela um valor, pela estrutura minhavariavel = 'valor'; .</li>
+                <li>Ou pode fazer a declaração de sua variavel e do seu valor numa unica linha, pela estrutura  let minhavariavel = 'valor'; .</li>
+                <li>
+                    O valor dado a minhavariavel pode mudar, a não ser que ela seja uma constante.
+                    <ul>
+                        <li>Caso a variavel mude, declare usando let.</li>
+                        <li>Caso a variavel não mude, declare usando const.</li>
+                    </ul>
+                </li>
+                <li>
+                    Os valores dados a uma variavel podem ser:
+                    <ul>
+                        <li>string: uma sequencia de texto, que deve ser envolvido em aspas simples ('').</li>
+                        <li>numeros: não precisam ser envolvidos por aspas simples.</li>
+                        <li>boolean: Um valor verdadeiro ou falso. São palavras-chaves especiais em JS e não precisam de aspas.</li>
+                        <li>array: uma estrutura que permite armazenar vários valores em uma única variável ao envolver este valores entre colchetes separados por virgulas [ , , ,].</li>
+                        <li>object: basicamente, qualquer coisa. Tudo em JavaScript é um objeto e pode ser armazenado em uma variável. </li>
+                    </ul>
+                </li>
+                <li>Serve para fazer qualquer coisa interessante em programação ao criar dinamicidade no seu projeto.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Comentários:</b> Os comentários são, essencialmente, pequenos trechos de texto que podem ser adicionados entre os códigos 
+            e são ignorados pelo navegador. Podem ser adicionado pela estrutura /* mensagem */ ou // mensagem (caso não tenha quebra de 
+            linha.)
+        </li>
+        <br>
+        <li>
+            <b>Operador:</b> é um símbolo matemático que produz um resultado baseado em dois valores (ou variáveis). Alguns deles são:
+            <ul>
+                <li>Adição ( + ), Subtração ( - ), Multiplicação ( * ) e Divisão (/), que operam exatamente como na matematica.</li>
+                <li>Atribuição ( = ), que associa um valor a uma variável.</li>
+                <li>Operador de igualdade ( === ), que testa dois valores para ver se eles são iguais, retornando um resultado true/false (booleano).</li>
+                <li>
+                    Negação ( ! ) ou não igual ( !== ), que retorna o valor lógico oposto do sinal, transformando um true em um false, etc. 
+                    Quando usado junto com o operador de igualdade, o operador de negação testa se os valores são diferentes.
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Condicionais:</b> são estruturas de código que te permitem testar se uma expressão retorna verdadeiro ou não, executando 
+            um código alternativo revelado por seu resultado.
+            <ul>
+                <li>
+                    Vai se expressar por uma operação que terá como resultado um valor boleano em relação a uma suposição. Veja os exemplos abaixo:
+                    <ul>
+                        <li> 
+                            Uma const é par. Para sabermos isso, precisamos criar uma expressão que defina um valor como par, que é se divisivel por 2. <br>
+                            Podemos expressar isso através das estruturas "const <i>numero</i> =  x;" e "const <i>par</i> = <i>numero</i> % 2 === 0;", 
+                            no qual a constante <i>numero</i> é o valor que desejamos saber se é par e a constante <i>par</i> é o que define um numero como par. <br>
+                            Se o resultado da operação for 0, ele é verdadeiro. Se não for, ele é falso.
+                        </li>
+                        <li> Então a condicional testa as variaveis sobre alguma suposição dentro de uma operação, o que significa que precisa de variaveis e uma definição expressa em operação para funcionar.</li>
+                    </ul>
+                </li>
+                <li>
+                    Na condicional if (...) {comando}, a expressão dentro do parenteses é o teste. Se esse teste retorna true, o primeiro bloco de código será executado. 
+                    Se não for verdadeira, o primeiro bloco de código será ignorado e o segundo bloco de código, após a instrução else, 
+                    será executado.
+                </li>
+                <li>A negação da condicional if (...) {comando} é if (!...) {outro comando}, no qual ! funciona como operador de negação.</li>
+                <li>
+                    Para abrevear a transcrição da negação completa, pode-se incluir a palavra <i>else</i> após as chaves, economizando em linhas 
+                    de codigo. Assim a expressão de negação se torna if (...) {comando} else {outro comando}.
+                </li>
+                <li>Para escalar as condicionais, pode-se usar a expressão if (...) {comando} else if (...), {outro comando} else {mais outro comando}.</li>
+                <li>Por convenção, se coloca o prefixo <i>is</i> nas denominações de variaveis boleana.</li>
+                <li><mark>Uma variavel criada dentro de um bloco de condicional só será válida dentro daquele bloco. Preferir este formato caso só necessite uma vez da variavel.</mark></li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Funções:</b> são uma maneira de encapsular funcionalidades que você deseja reutilizar. Quando você precisa de um procedimento, 
+            você pode chamar a função com um nome, em vez de reescrever o código inteiro a cada vez.
+            <ul>
+                <li>Se você ver algo que parece com um nome de variável, mas com parênteses — () — depois, provavelmente é uma função. </li>
+                <li>
+                    Funções geralmente tem Argumentos — pedaços de dados que elas precisam para realizarem o seu trabalho. Os argumentos 
+                    são colocados dentro dos parênteses e separados por vírgulas, se houver mais de um. Basta construir o argumento 
+                    através da seguinte estrutura:
+                    <ul>
+                        <li>
+                            function nomedafuncao (valor1, valor2) { <br>
+                                let resultado = valor1 <sub>op</sub> valor2; <br>
+                                returne resultado; <br>
+                            } 
+                            <br><br>
+                            function nomedafuncao (valor1, valor2) { <br>
+                                let resultado = valor1 <sub>op</sub> valor2; <br>
+                                console.log(resultado); <br>
+                            }
+                        </li>
+                        <li>Use return para calcular um resultado que não será apresentado no final.</li>
+                        <li>Use a função console.log() para apresentar o resultado final.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Eventos:</b> são estruturas de código que percebem as coisas que acontecem no navegador, executando o código em resposta. 
+        </li>
+    </ul>
+
+    <h2>Simplificando o codigo</h2>
+    <p>
+        Para tornar o codigo mais simples e mais facil de ser lido, é possivel escrever estruturas que servirão 
+        de repositorio de dados que poderam ser invocados adiante no codigo. Elas são:
+        <ul>
+            <li>
+                <b>Objeto:</b> é uma coleção dinamica de dados formada por chaves ({}) e valores.
+                <ul>
+                    <li>Possui a seguinte estrutura: <br><br>
+                        const/let nomeobjeto = { <br>
+                            valor1 = x <br>
+                            valor2 = y <br>
+                        } <br><br>
+                    </li>
+                    <li>Pode se incrementada, adicionando um valor ao objeto por ponto final: nomeobjeto.y = z;</li>
+                    <li>Pode deletar valor tbm, usando delete nomedoobjeto.valor1.</li>
+                    <li>É possivel referenciar um valor especifico através da sintaxe ${this.valor}; </li>
+                    <li>Pode-se referenciar um valor especifico por nomedoobjeto['valor1'] = valor1.</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>Classes</b> é uma  estrutura de cogigo que define genericamente algo.
+                <ul>
+                    <li>Aglutina valores que descrevem o que algo é de modo a classifica-lo. É uma definição ampla de um conceito.</li>
+                    <li>Difere de uma <i>instancia</i>, que é uma definição especifica de um objeto que pertence a uma classe, uma ocorrencia da classe. </li>
+                    <li>
+                        Exemplo: <br>
+                        Pessoa {nome; idade; peso; altura, profissao};
+                        const tamires{nome = 'Tamires'; idade = 29; peso = 49; altura = 1.59; profissão = 'designer'}; (Instancia de Pessoa) <br>
+                    </li>
+                    <li>
+                        Para simplificar, podemos invocar a função constructor, que criará uma instancia a partir da correspondencia de seus 
+                        valores com os atributos que constroem uma classe. Assim, variaveis podem ser contextualizadas. <br> <br>
+                    </li>
+                    <li> 
+                        Use a função new para especificar um objeto como classe. <br>
+                        Exemplo: const tamires = new Pessoa ('Tamires', 29, 49, 1.59, designer)
+                    </li>
+                    <li>Metodo é uma instrução dentro do objeto (uma função interna). </li>
+                    <li><mark>Verificar exercicio do Desafio 4 para melhor compreensão dos exemplos.</mark></li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>Arrays</b> (ou listas) são blocos de codigo que sinalizam um conjunto de valores, que podem ser referenciados 
+                dependendo de suas posições. Segue a estrutura: <br><br>
+                variavel = [valor1, valor2, valor3]; <br><br>
+                <ul>
+                    <li>Usa-se colchetes ([ ]) para sinalizar um array; </li>
+                    <li>A indicação da posição de um valor em uma lista começa do zero (0), como variavel[0].</li>
+                    <li>Pode-se adicionar valores ao array usando a estrutura <mark>variavel.push(valor4);</mark> ou <mark>variavel[3] = valor4;</mark></li>
+                    <li>Adição por push inclui o valor ao final da lista. Caso adicione um valor diretamente pela posição, o valor colocado por push será substituido e apagado.</li>
+                    <li>varial.pop(); remove o ultimo valor de uma lista.</li>
+                    <li>variavel.shift(); remove o primeiro.</li>
+                    <li>variavel.lenght(); mostrar o tamanho da lista, quantos valores ela possui.</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>Estruturas de repetição</b> servem para repetir instruções ao codigo.
+                <ul>
+                    <li> 
+                        for é uma estrutura que serve para percorrer uma instrução um numero determinado de vezes. Segue a estrutura:<br><br>
+                        
+                        for (let i = 0; i < array.length; i++) {} <br><br>
+
+                        na qual let i é a declaração da veriavel com a posição desejada, i < array.leght é o tamanho da lista e i++ é o incremento a declaração, que no caso é +1.   
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+
+    <h2>Importando e exportando com  JavaScript</h2>
+    <p>
+        É possivel compartilhar estruturas de codigo entre diferentes arquivos .js. Para isso, basta implementar estruturas dentros 
+        destes arquivos que permitam que eles importem e exportem estes codigos.
+    </p>
+    <ul>
+        <li><b>Exportar:</b> crie as estruturas que deseja exportar e aglutine como valores dentro do objeto <mark>module.export { estr1, estr2 }</mark></li>
+        <li><b>Importar:</b> crie no novo arquvivo uma variavel que utilize como valor <mark>require('enderecodoarquivoexportado');</mark></li>
+    </ul>
+    <p>Consultar para mais informações a documentação: <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Documentação introdutória sobre JavaScript</a></p>
+    
+</body>
+</html>

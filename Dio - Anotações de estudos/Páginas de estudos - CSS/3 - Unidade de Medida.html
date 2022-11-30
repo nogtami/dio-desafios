@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medida</title>
+</head>
+<body>
+    <h1>Unidades de Medida</h1>
+    <hr>
+    <p>Este documento contém anotações dos conteudos passados no curso de "Unidade de Medida", da Dio.me.</p>
+
+    <h2>Unidades de medida absolutas</h2>
+    <p>São tamanhos que não estão atrelados a nenhum outro valor de referencia. 
+        Ou seja, elas não dependem de nenhu outro valor para serem calculadas. <br>
+        <mark>Exemplo:</mark> cm (centimetros), mm (milimetros), Q (quatro de milimetro), in (polegadas),
+        pc (paica), pt (pontos), px (pixels), entre outras.
+    </p>
+    <ul>
+        <li>Estas unidades de medidades são fixas e não podem mudar de acordo com os dispositivos ou outro elemento.</li>
+        <li>O resultado será sempre o mesmo.</li>
+        <li>
+            Usadas quando conhecemos as caracteristicas e configurações dos dispositivos ou quando não 
+            queremos que estas caracteristicas mudem por interferencia de outro fator ou elemento.
+        </li>
+        <li>Podem ser mais uteis quando trabalhadas para impressão do que para o meio digital.</li>
+        <li>
+            <b>Pixels</b> é a unidade de medida absoluta mais comum para meios digitais. 
+            <ul>
+                <li>É considerada a menor unidade de alguma representação digital.</li>
+                <li>Esta unidade não possui um valor fixo e varia de acordo com a <i>densidade da tela</i>, 
+                    que é calculada pela divisão da resolução da tela (quantidade de pixels) e o tamanho da tela (quantidade de polegadas). 
+                    Assim, a unidade utilizada para definir a densidade de um tela é a ppi (pixels por polegada).
+                </li>
+                <li>Pixels físicos X Pixels lógicos:</li>
+                <ul>
+                    <li><u>Pixels físicos</u> são pixels reais, que existem na tela do dispositivo digital. <u>(Cada "luzinha" da tela)</u></li>
+                    <li><u>Pixels lógicos</u> são o quanto um conteúdo cabem dentro da tela de um dispositivo, independente da sua densidade.</li>
+                    <li>
+                        A resolução de uma tela é calculada com a quantidade de pixels físicos que ela possui em altura e largura 
+                        (resolução = px.alt x px.larg). <br>
+                        O cálculo de densidade numa tela é: densidade = (px.alt x px.larg)/ins.
+                    </li>
+                    <li>
+                        Quanto maior a densidade de uma tela, maior será a definição de seu contéudo.
+                    </li>
+                    <li>
+                        Entretanto, o CSS só está se importanto com a quantidade lógica de pixels 
+                        (ou seja, o quanto de conteudo cabe na tela, independente de sua densidade). 
+                        Ele não se preocupa com esta questão de densidade dos pixels.
+                    </li>
+                </ul>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Unidades de medida relativas</h2>
+    <p>
+        São unidades calculadas com base em unidades já conhecidas de um outro elemento, o que faz com que o resultado possa variar
+        de acordo com o valor da propriedade do elemento no qual estamos nos baseando.
+    </p>
+    <ul>
+        <li>
+            Pode ajudar a dimensionar um elemento em relação a outro. <br>
+            <mark>Exemplo:</mark> um texto em relação ao tamanho de uma tela ou outro elemento que possa ser seu container.
+        </li>
+        <li>Auxiliam na construção de responsidade de um site ao ajudarem a adaptar os elementos corretamente aos dispositivos utilizados pelos usuários.</li>
+        <li>São calculos feitos pelo navegadores que traduzem o nosso conteudo em pixels nas telas.</li>
+    </ul>
+    <p>Algumas unidades de medida relativas são:</p>
+    <ul>
+        <li><b>porcentagem:</b> 
+            é uma unidade de medida que tomará por referencia o elemento pai para se basear, podendo alterar o resultado de acordo com 
+            o lugar que está inserida.
+        </li>
+        <br>
+        <li>
+            <b>em:</b> é utilizada para definir o tamanho do elemento através da propriedade fonte-size.
+            <ul>
+                <li>Quando para a propriedade <u>font-size</u>, vai tomar como referencia o valor da propriedade font-size do elemento pai no qual o elemento 
+                    filho está inserido.
+                </li>
+                <li>
+                    Quando para <u>outras propriedades que não a font-size</u>, vai usar como referencia o valor do font-size do mesmo elemento.
+                </li>
+                <li>
+                    Como uma unidade de medida que multiplica valores a partir da relação entre elementos pai-filho, precisa tomar cuidado para não 
+                    perder controle das medidas.
+                </li>
+                <li>
+                    Utilizar o em, assim como o rem, traz flexibilidade aos projetos e capacidade de dimensionar os elementos das páginas web, 
+                    o que resulta em facildade de manitenção de codigo, designer responsivos e controle da escala dos navegadores.
+                </li>
+                <li>
+                    Porque utilizar o em?
+                    <ul>
+                        <li>Escala definida pelo contexto no qual o elemento está inserido.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>rem:</b> é uma unidade que, assim como a em, utiliza o font-size para basear o tamanho do seus elementos. Entretanto, 
+            faz isso através de um elemento raiz, que no caso é a tag html. 
+            <ul>
+                <li>Como padrão, esta tag tem como font-size o valor de 16 px.</li>
+                <li>
+                    Todos os valores utilizarem como medida o rem vão consultar o valor da propriedade font-size da tag raiz html 
+                    para se basearem, independente da sua relação elemento pai-filho.
+                </li>
+                <li>
+                    Utilizar o rem, assim como o em, traz flexibilidade aos projetos e capacidade de dimensionar os elementos das páginas web, 
+                    o que resulta em facildade de manitenção de codigo, designer responsivos e controle da escala dos navegadores.
+                </li>
+                <li>
+                    Porque utilizar o rem?
+                    <ul>
+                        <li>Tamanhos de unidades consistentes, sem herança.</li>
+                        <li>Melhor experiência da pessoa usuária.</li>
+                        <li>Facilita a acessibilidade.</li>
+                    </ul>
+                </li>
+                <li>
+                    É uma unidade de medida mais comumente utilizada pela sua capacidade de controle de desenvolvimento, consistencia de 
+                    tamanhos e promoção de autonomia à pessoa usuária.
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>viewport:</b> é a área visivel de uma página web, podendo variar de dispositivo para dispositivo. É calculada com base no 
+            tamanho da área da nossa página que o usuário esta vendo.
+            <ul>
+                <li>vw (ou <u>viewport width</u>) é 1% da largura da tela do dispositivo utilizado.</li>
+                <li>wh (ou <u>viewport height</u>) é 1% da altura da tela do dispositivo utilizado.</li>
+                <li>vmin é uma unidade que vai pegar como referencia o menor valor entre largura e altura da viewport de um dispositivo.</li>
+                <li>vmax é uma unidade que vai pegar como referencia o maior valor entre largura e altura da viewport de um dispositivo.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>ex:</b> toma como referencia a altura do caracter x minusculo da fonte que está sendo utilizada.
+            <ul>
+                <li>Muda quando a fonte é alterada.</li>
+                <li>Não é uma unidade de medida muito utilizada. </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>ch:</b> toma como medida a largura do caracter 0 da fonte que está sendo utilizada.
+            <ul>
+                <li>Caso seja uma fonte monoespaçada, estamos dizendo que 1 ch cabem 1 caracter.</li>
+                <li>Muda quando a fonte é alterada.</li>
+                <li>Não é uma unidade de medida muito utilizada.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Função cal ( )</h2>
+    <p>Util para realizar calculos de medidas, intercalando valores absolutos com relativos. Realiza-se pela expressão:</p>
+    <p>propriedade: cal ( valor1 <sub>operador</sub> valor2), <mark>exemplo:</mark>  width: cal (100% - 30px).</p>
+</body>
+</html>

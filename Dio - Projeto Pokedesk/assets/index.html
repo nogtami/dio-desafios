@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de estudos - Pokédesk</title>
+
+    <!-- normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Fonte: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS local -->
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/pokemon.css">
+</head>
+<body>
+
+    <section class="content">
+        <h1>Pokédex</h1>
+
+        <ol id="pokemonList" class="Pokemons">
+            <!-- <li id="Bulbasaur" class="pokemon" >
+                <span class="order">001</span>
+                <span class="name">Bulbasaur</span>
+                <div class="detail">
+                    <ol class="types">
+                        <li class="type">grass</li>
+                        <li class="type">poison</li>
+                    </ol>
+                    
+                    <img src="/imagens/Bulbasaur.png" alt="Bulbasaur">
+                </div>
+                
+            </li>
+
+           <li id="Ivysaur" class="pokemon">
+                <span class="number">002</span>
+                <span class="name">Ivysaur</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="grass">grass</li>
+                        <li class="poison">poison</li>
+                    </ol>
+                    
+                    <img src="/imagens/Ivysaur.png" alt="Ivysaur">
+                </div>
+                
+            </li>
+
+            <li id="Venusaur" class="pokemon">
+                <span class="number">003</span>
+                <span class="name">Venusaur</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="grass">grass</li>
+                        <li class="poison">poison</li>
+                    </ol>
+                    
+                    <img src="/imagens/Venusaur.png" alt="Venusaur">
+                </div>
+                
+            </li>
+
+            <li id="Charmander" class="pokemon">
+                <span class="number">004</span>
+                <span class="name">Charmander</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="fire">fire</li>
+                    </ol>
+                    
+                    <img src="/imagens/Charmander.png" alt="Charmander">
+                </div>
+                
+            </li>
+
+            <li id="Charmeleon" class="pokemon">
+                <span class="number">005</span>
+                <span class="name">Charmeleon</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="fire">fire</li>
+                    </ol>
+                    
+                    <img src="/imagens/Charmelion.png" alt="Charmeleon">
+                </div>
+                
+            </li>
+
+            <li id="Charizard" class="pokemon">
+                <span class="number">006</span>
+                <span class="name">Charizard</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="fire">fire</li>
+                        <li class="flying">flying</li>
+                    </ol>
+                    
+                    <img src="/imagens/Charizard.png" alt="Charizard">
+                </div>
+                
+            </li>
+
+            <li id="Squirtle" class="pokemon">
+                <span class="number">007</span>
+                <span class="name">Squirtle</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="water">water</li>
+                    </ol>
+                    
+                    <img src="/imagens/Squirtle.png" alt="Squirtle">
+                </div>
+                
+            </li>
+
+            <li id="Wartortle" class="pokemon">
+                <span class="number">008</span>
+                <span class="name">Wartortle</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="water">water</li>
+                    </ol>
+                    
+                    <img src="/imagens/Wartortle.png" alt="Wartortle">
+                </div>
+                
+            </li>
+
+            <li id="Blastoise" class="pokemon">
+                <span class="number">009</span>
+                <span class="name">Blastoise</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="water">water</li>
+                    </ol>
+                    
+                    <img src="/imagens/Blastoise.png" alt="Blastoise">
+                </div>
+                
+            </li>
+
+            <li id="Caterpie" class="pokemon">
+                <span class="number">010</span>
+                <span class="name">Caterpie</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="bug">bug</li>
+                    </ol>
+                    
+                    <img src="/imagens/Caterpie.png" alt="Caterpie">
+                </div>
+                
+            </li>
+
+            <li id="Metapod" class="pokemon">
+                <span class="number">011</span>
+                <span class="name">Metapod</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="bug">bug</li>
+                    </ol>
+                    
+                    <img src="/imagens/Metapod.png" alt="Metapod">
+                </div>
+                
+            </li>
+
+            <li id="Butterfree" class="pokemon">
+                <span class="number">012</span>
+                <span class="name">Butterfree</span>
+                <div class="details">
+                    <ol class="types">
+                        <li class="bug">bug</li>
+                        <li class="flying">flying</li>
+                    </ol>
+                    
+                    <img src="/imagens/Butterfree.png" alt="Buttlerfree">
+                </div> -->
+        </ol>
+
+        <div class="pagination">
+            <button id="loadMoreButton" type="button">
+                Mais Pokémons
+            </button>
+        </div>
+    </section>
+
+    <!-- Fonte das imagens: https://www.pngegg.com/en/search?q=pokemon -->
+
+    <!-- Fonte pokedesk: https://pokemondb.net/pokedex/all -->
+
+    <!-- URL = endereco (IP) + path (caminho de identificação de recurso)
+    Method: orienta o tipo de requisição que será feita ao servidor. 
+    GET (busca) | Post (insere) | Put (atualiza) | Delete (remove)-->
+
+    <!-- Passagem de parametros: Path Params (caminho direto de recurso) e Query String (filtragem de recursos por valores. ?valor1&valor2) -->
+
+    <!-- Request Headers: configuração da requisição feita pelo cliente. -->
+
+    <!-- Response Headers: configuração da resposta feita pelo servidor. -->
+
+    <!-- Body: são os dados que navegam na requisição (POST | PUT) e na resposta (GET). -->
+
+    <!-- Status code: apresentação dos estado da requisição (Processada | não processada) -->
+
+    <!-- Javascript principal -->
+    <script src="/assets/js/pokemon_model.js"></script>
+    <script src="/assets/js/pokeapi.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

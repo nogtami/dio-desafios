@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizações Básica com CSS</title>
+</head>
+<body>
+    <h1>Estudos de CSS - Estilizações básicas</h1>
+    <hr>
+    <p>Neste documento, apresento as anotações dos aprendizados adquiridos durante o curso de Estilizações Básica com CSS, da Dio.me.</p>
+ 
+    <h2>Cores</h2>
+    <p>Existem várias possibilidades de configuração de cores no CSS. Algumas delas são:</p>
+    <ul>
+        <li>
+            <b>Cores pré definidas:</b>são cores oferecidas pelos navegadores de forma pré-definida, 
+            as quais os desenvolvedores conseguem referencia-las pelo nome. <br>
+            <mark>Exemplo: </mark>aquamarine, lightblue, lightgreen.
+            <ul>
+                <li>
+                    <b>Palavra reservada "currentcolor:</b> 
+                    aplica a configuração atual da propriedade color as outras propriedade de um elemento
+                </li>
+                <li>
+                    <b>Palavra reservada "transparent":</b>
+                    Deixa qualquer propriedade de cor escolhida transparente.
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li><b>Hexadecimal:</b> um sistema que combina seis numeros para criar cores, 
+            variando entre numeros que vão de 0 a 9 e letras que vão de A a F.
+            <ul>
+                <li>Para trabalhar com a opacidade, basta adiocionar valores entre 00 e FF ao final dos seis numeros.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>RGB:</b>utiliza o sistema RGB (Red, Green, Blue) para criar combinações de cores.
+            <ul>
+                <li>Utiliza valores numero do 0 ao 255 para definir as tonalidades de cada cor primária.</li>
+                <li>Também defni valores através de porcentagens.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>RGBA:</b> é uma extensão do sistema RGB, 
+            com a adição de um canal Alfa que definirá a opacidade das cores.
+            <ul>
+                <li>O valor de opacidade é declarado por decimais que variam de 0.0 a 1.0.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>HSL:</b> sistema de combinação de cores que trabalha com Matriz (Hue), 
+            Saturação (Saturation) e Brilho (Lightness). 
+            <ul>
+                <li>Matriz define o grau na cor no circulo cromatico (valor em grau), estabelecendo seu tom.</li>
+                <li>Saturação define a escala de cinza da cor (valor em %), estabelecendo sua vivacidade.</li>
+                <li>Brilho define a quantidade de branco de uma cor (valor em %), deixando-a mais clara ou escura.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>HSLA:</b> é uma extensão do sistema HSL, 
+            com a adição do canal Alfa que estabelece a opacidade da cor.
+            <ul>
+                <li>O valor de opacidade é declarado por decimais que variam de 0.0 a 1.0.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Imagens</h2>
+    <p>Existem duas propriedades no CSS que são fundamentais para trabalhar com imagens no documento HTML.</p>
+    <ul>
+        <li>
+            <b>Object-fit:</b> 
+            determina o redimensionamento de uma imagem dentro de um elemento, definido como <i>container</i>. <br>
+            Essa propriedade vai dizer para a imagem ou video de ele deve preservar a sua proporção ou se distorcer para caber no container.
+            <ul>
+                <li>Fill: redimensiona a imagem para que ela caiba no container, seguindo os valores de proporção estabelecido ao container.</li>
+                <li>Contain: redimensiona a imagem proporcionalmente para que ela caiba no container.</li>
+                <li>Cover: Corta as laterais da imagem para que ela caiba no container.</li>
+                <li>None: a imagem ignora as proporções estabelecidas ao container e mantem suas proporções originais.</li>
+                <li>Scale-down: irá escolhe das configurações anteriores aquela que apresenta os menores valores adequados ao container.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Object-position:</b> 
+            determina como um objeto deve ser posicionado horizontal e verticalmente dentro de um container. <br>
+            Trabalha em conjunto com a propriedade object-fit.
+            <ul>
+                <li>Utiliza valores em porcentagem (%) ou palavras reservadas (top, left, center, right, bottom).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Fundo dos Elementos</h2>
+    <p>É possível alterar o fundo do elementos HTML acrescentando cores, imagens, gradientes, etc.</p>
+    <ul>
+        <li>
+            <b>background:</b> 
+            funciona como uma propriedade resumida que serve como atalho para configurar valores de outras propriedades de fundo no CSS.
+            <ul>
+                <li>Basta adicionar os valores separados por espaço ( ).</li>
+            </ul>
+        </li>
+        <br>
+        <li><b>background-color:</b> define a cor de fundo de um elemento.</li>
+        <br>
+        <li>
+            <b>background-image:</b> define uma imagem pre-definida (url) ou 
+            constroi um gradiente como plano de fundo de um elemento. (linear/radial-gradient).
+        </li>
+        <br>
+        <li>
+            <b>background-size:</b> ajusta imagens ao elemento que estará contida.
+            <ul>
+                <li>Auto: ajustará a imagem automaticamente ao elemento. <b>(Padrão)</b></li> 
+                <li>Cover: cobrirá o elemento com a imagem, se ela for maior será cortada e se for menor, será expandida. </li>
+                <li>Contain: redimensionará a imagem para que ela apareça de forma completa no elemento.</li>
+                <li>Valores (px,%): ajusta as imagem seguindo valores para largura e altura do elemento.</li>
+                <li>Por camadas: separando valores por virgula (,), ajusta as dimensões de diferentes imagens num elemento.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>background-repeat:</b> define se haverá repetição da imagem em um elemento.
+            <ul>
+                <li>Repeat: repetirá a imagem lado a lado em todas as direções. <b>(Padrão)</b></li>
+                <li>Repeat-x: define que a imagem só deve se repetir no eixo x (largura). </li>
+                <li>Repeat-y: define que a imagem só deve se repetir no eixo y (altura).</li>
+                <li>Space: repetira a imagem de forma a manter sua integridade, adicionando espaço vazios ao elemento para garantir isso.</li>
+                <li>Round: redimensiona a imagem para que ela caiba integralmente no elemento, sem a necessidade de corte.</li>
+                <li>No-repeat: define que a imagem não deve ser repetida no elemento.</li>
+                <li>Todos este valores podem ser aplicados por eixo (largura x altura).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>background-position:</b> define o posicionamento da imagem dentro do elemento.
+            <ul>
+                <li>Pode utilizar valores em pixels (px), porcentagens (%) ou nomenclaturas (top, left, right, bottom, center).</li>
+                <li>Estes valores podem ser declarados por eixo.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>background-attachment:</b> define como o fundo do elemento vai se mover em relação a rolagem do navegador.
+            <ul>
+                <li>fixed: define a imagem de fundo como fixa mesmo que rolemos os conteudos do elemento e a pagina do navegador.</li>
+                <li>scroll: define que a imagem de fundo role junto com o navegador, mas se mantenha fixo em relação aos conteudos do elemento.</li>
+                <li>local: define que os conteudos do elementos rolem junto com a imagem de fundo, mas se mantenha fixos com a rolagem do navegador.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>background-origin:</b> define qual será o ponto de origem de uma imagem de fundo.
+            <ul>
+                <li>padding-box: define que o ponto de origem da imagem de fundo seja no canto superior esquerdo do seu espaçamento interno. <b>(Padrão)</b></li>
+                <li>border-box: define que o ponto de origem da imagem de fundo seja o canto superior esquerdo da borda do elemento.</li>
+                <li>content-box: define que o ponto de origem da imagem de fundo seja o canto superior esquerdo da área de conteudo.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>background-clip:</b> permite definir o prenchimento de fundo para cores e imagens num elemento.
+            <ul>
+                <li>padding-box: permite preencher a área de espaçamento interno de um elemento.</li>
+                <li>border-box: permite preencher a área de borda de um elemento.</li>
+                <li>content-box: permite preencher a área de conteudo de um elemento.</li>
+                <li>text: permite preencher as cores do texto de conteudo com o fundo do elemento. 
+                    (No Chrome, é necessario configurar <i>-webkit-background-clip: text</i> para funcionar).
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>background-blend-mode:</b> permite realizar mesclagens entre cor e imagem de fundo num elemento.
+            <ul>
+                <li>São muitas possibilidades de valores para esta propriedade, por isso é válida uma pesquisa só sobre isso.</li>
+                <li>Funciona para adicionar efeitos nas imagens.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Bordas</h2>
+    <p>Pode-se adicionar e configurar bordas nos elementos de um documento HTML utilizando algumas propriedades CSS.</p>
+    <ul>
+        <li>
+            <b>border:</b> 
+            é uma propriedade resumida que serve como atalho para configurar valores de outras propriedades de bordas CSS. 
+            <ul>
+                <li>Basta adicionar os valores separados por espaço ( ).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-width:</b> define a largura da borda de um elemento.
+            <ul>
+                <li>Seus valores podem definidos por pixels (px), porcentagens (%) ou nomenclaturas (thin, medium, thick)</li>
+                <li>Pode definir valores por eixo (largura x altura, cima/direita/baixo/esquerda) separando por espaço ( ).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-style:</b> define o tipo de borda que colocaremos no elemento.
+            <ul>
+                <li>none: define que não há bordas nos elementos <b>(Padrão)</b>;</li>
+                <li>solid: define uma borda por linha contínua;</li>
+                <li>dashed: define uma borda por traços;</li>
+                <li>dotted: define uma borda pontilhada;</li>
+                <li>double: define uma borda dupla;</li>
+                <li>groove: define uma borda superior tridimensional;</li>
+                <li>ridge: define uma borda inferior tridimenshional;</li>
+                <li>inset: define uma borda de aprofundamento do elemento;</li>
+                <li>outset: define uma borda de destaque do elemento.</li>
+                <li>Pode definir valores por eixo (largura x altura, cima/direita/baixo/esquerda) separando por espaço ( ).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-color:</b> define a cor da borda de um elemento.
+            <ul>
+                <li>Segue como unidades de valores todas as unidades de cores discutidas anteriormente.</li>
+                <li>Caso não tenha definido uma propriedade especifica de cor para borda, seguirá a propriedade color. <b>(Padrão)</b></li>
+                <li>Pode definir valores por eixo (largura x altura, cima/direita/baixo/esquerda) separando por espaço ( ).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-radius:</b> define o raio da borda, arredondando seus cantos.
+            <ul>
+                <li>Pode ser aplicado sem haver uma borda visivel, dando a impressão que o próprio elemento é arredondado.</li>
+                <li>Pode definir valores por eixo (largura x altura, cima/direita/baixo/esquerda) separando por espaço ( ).</li>
+                <li>Para um efeito oval, definir valores divididos por /.</li>
+                <li>Define valores por pixels (px) ou porcentagem (%).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-image:</b> 
+            é propriedade resumida que serve para configurar valores de outras propriedades que define bordas para imagens no CSS.
+            <ul>
+                <li>Basta adicionar valores separados por espaço ( ).</li>
+                <li>Para separar os valores referentes ao width, outset e slice, utiliza barra (/).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-image-source:</b> define o caminho de imagem que será utilizada para criar uma borda ao elemento.
+            <ul>
+                <li>Aceita o valor none. <b>(Padrão)</b></li>
+                <li>Define uma borda usando o caminho de uma imagem (valor url) ou criando um gradiente (linear/radius-gradient).</li>
+                <li>Sem outras propriedades, irá preencher com a imagem ou o gradiente somente os cantos da borda do elemento.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-image-width:</b> define qual será a largura de imagem da borda de um elemento.
+            <ul>
+                <li>Pode definir valores por eixo (largura x altura, cima/direita/baixo/esquerda) separando por espaço ( ).</li>
+                <li>Seus valores podem definidos por pixels (px), porcentagens (%) ou nomenclaturas (auto)</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-image-repeat:</b> define a possibilide de repetição da imagem na composição da borda de um elemento.
+            <ul>
+                <li>repeat: divide a imagem para preencher toda a área das laterais da borda.</li>
+                <li>strech: estica as regioes laterais da imagem para que ocupe todo espaço da borda. Não mexe nos cantos.</li>
+                <li>round: vai redimensionar a imagem de modo a evitar cortes.</li>
+                <li>space: redimensiona a imagem para que ela caiba na borda, criando espaços caso a imagem não possa se ajustar por completo as bordas.</li>
+                <li>Pode definir valores por eixo (largura x altura, cima/direita/baixo/esquerda) separando por espaço ( ).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-image-outset:</b> definira a distância entre borda e elemento.
+            <ul>
+                <li>Seus valores podem definidos por pixels (px) ou porcentagens (%), sempre positivos.</li>
+                <li>Pode definir valores por eixo (largura x altura, cima/direita/baixo/esquerda) separando por espaço ( ).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>border-image-slice:</b> divide a imagem em regiões para serem trabalhadas na borda de um elemento.
+            <ul>
+                <li>
+                    Os cantos da imagem são as regiões 1, 2, 3 e 4 (em sentido horário) e são utilizadas uma vez 
+                    para compor a imagem final da borda. Ficaram nos cantos do elemento.
+                </li>
+                <li>
+                    As regiões 5, 6, 7, 8 foram as laterais horizontais e verticais da imagem (direita, esquerda, cima, baixo)
+                    e podem ser repetidas ou modificadas para formar a borda.
+                </li>
+                <li>A região 9 representada a região central da imagem, que é descartada para formar a borda do elemnto.</li>
+                <li>As três propriedades de bordas acima definem como estas regiões serão utilizadas para definir a borda do elemento.</li>
+                <li>
+                    Pode-se utilizar valores pixels (px), porcetagem (%) ou fill 
+                    (um valor que preenche o centro do elemento com a região que anteriormente seria descartada).
+                </li>
+                <li>Aceita mais de um valor, separando-os por espaço ( ).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Fontes</h2>
+    <p>Pode-se modificar a tipografia dos elementos textuais de um documento HTML utilizando-se algumas propriedades CSS.</p>
+    <ul>
+        <li>
+            <b>font</b> é uma propriedade resumida que serve como atalho para configurar valores de outras propriedades de fonte CSS.
+            <ul>
+                <li>Basta adicionar valores separados por espaço ( ).</li>
+                <li>
+                    Os valores do font-size e font-family são obrigatórios e, caso não seja definidos pelo desenvolvedor, 
+                    serão definidos pelo navegador.
+                </li>
+                <li>Os valores de font-size e line-height devem ser separados por barra (/).</li>
+            </ul>  
+        </li>
+        <li>
+            <b>font-family:</b>
+            define uma fonte especifica ou uma familia de fonte (padrões do sistema operacional) para os elementos tipograficos do documento HTML. 
+            <ul>
+                <li>Como boas práticas, fontes que tenham como nome mais de uma palavra separada por espaço devem ser apontadas entre aspas ("").</li>
+                <li>Caso o navegador não possua a primeira opção de tipografia, pode-se definir uma segunda, separando por vírgula (,). (técnica fallback)</li>
+            </ul>
+            <br>
+            <li>
+                <b>font-weight:</b> 
+                define a espessura das fontes de um elemento.
+                <ul>
+                    <li>Pode-se definir por nomenclatura (bold, italic, thin,...)</li>
+                    <li>A tag b nada mais é do que a aplicação do font-weight bold dentro do próprio arquivo HTML.</li>
+                    <li>Aceita valores de 100 a 900 e nomenclaturas (normal, bold, lighter, bolder).</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>font-size:</b> define o tamanho de uma fonte.
+                <ul>
+                    <li>
+                        Aplica tanto valores númericos (em px ou outras unidades de medida) quanto nomenclatura 
+                        ( xx-small, x-small, small, medium, large, x-large, xx-large, smaller, larger).
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>font-style:</b> define o estilo de uma fonte (normal, itálica ou obliqua)
+                <ul>
+                    <li>normal: estabelece a fonte sem inclinações. <b>(Padrão)</b></li>
+                    <li>italic: estabelece a fonte com inclinações sutis.</li>
+                    <li>obliqua: estabelece a fonte com inclinações evidentes.</li>
+                    <li>A tag i nada mais é do que a aplicação do font-style italic dentro do próprio arquivo HTML.</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>font-variant:</b> define se o texto será exibido num formato versallete (small caps).
+                <ul>
+                    <li>Aceita dois valores: normal ou small-caps.</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>font-stretch:</b> define se o texto será mais condesado ou expandido.
+                <ul>
+                    <li>Só funciona se a fonte selecionada possuir esta configuração.</li>
+                    <li>Não é muito utilizada porque muitas fontes não dão suporte a ela.</li>
+                    <li>Seus valores podem ser aplicados por nomenclatura (ultra-condensed, extra-condensed, semi-condensed, 
+                        normal, semi-expanded, expanded, extra-expanded, ultra-expanded).</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>line-height:</b> define os espaçamentos entre linhas num texto, tomando como referencia o tamanho da fonte.
+                <ul>
+                    <li>Aceita valores em pixels (px), porcentagens (%), nomenclatura (normal) ou números sem unidades de medida.</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>@font-face:</b> 
+                define uma fonte que não está instalada no sistema operacional do desenvolvedor ou do usuário.
+                <ul>
+                    <li>Estabelece uma familia de fonte e seu caminho (url).</li>
+                    <li>Pode-se utilizar o caminho local ( ) para indicar que a fonte customizada deve ser buscada no sistema operacional também.</li>
+                    <li>
+                        Pode estabelecer configurações diferentes e independentes do sistema operacional para as tipografias. 
+                        Serve para que o navegador configura a fonte de modo originalmente idealizado pelo seu criador, sem adaptações do navegador.
+                    </li>
+                    <li>Pode definir de forma independente o font-weight, font-strech e font-style.</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>@input url():</b> 
+                importa uma folha de estilo para o arquivo CSS, que podem estar presentes tanto no nosso arquivo quanto num servidor remoto.
+                <ul>
+                    <li>Caso haja alguma alteração no arquivo CSS que estamos chamado, ela se refletirá no arquivo CSS importado para o projeto.</li>
+                    <li>
+                        Outro metodo de importação de fonte é através de link, que deverá ser colado ao head do documento HTML. 
+                        Pode trazer dificuldades a manutenção de projetos com muitas páginas. 
+                    </li>
+                    <li>Dica: criar uma arquivo CSS global e importa-lo com todos os estilos de fontes que serão utilizados no projeto para facilitar a manutenção da tipografia.</li>
+                </ul>
+            </li>
+        </li>
+    </ul>
+
+    <h2>Texto</h2>
+    <p>Existem algumas propriedades no CSS que são responsáveis por estilizar textos. Algumas delas são:</p>
+    <ul>
+        <li>
+            <b>text-transform:</b>
+            define quais caracteres estarão maiusculo, minisculos, etc.
+            <ul>
+                <li>none: não aplica nnenhuma modificação ao texto. Mantem o texto do modo que foi digitado. <b>(Padrão).</b></li>
+                <li>capitalize: define o primeiro caractere de um texto em maiusculo.</li>
+                <li>uppercase: define todos os caracteres do texto como maiusculos.</li>
+                <li>lowercase: define todos os caracteres do texto como minusculos.</li>
+                <li>initicial: aplica o valor padrão automaticamente.</li>
+                <li>inherit: define o valor do elemento com base no elemento-pai.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>text-align:</b> define o alinhamento do texto dentro do elemento.
+            <ul>
+                <li>left: alinhamento à esquerda. <b>(Padrão)</b></li>
+                <li>right: alinamento à direita.</li>
+                <li>center: alinahemento ao centro.</li>
+                <li>justify: alinhamento justificado.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>text-decoration:</b> é uma propriedade resumida que serve para configurar outras propriedades de  
+            adição de linhas ao texto.
+            <ul>
+                <li>Basta adicionar valores separados por espaço ( ).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>text-decoration-line:</b> define a posição de linha no texto.
+            <ul>
+                <li>none: define o texto sem linhas. <b>(Padrão)</b></li>
+                <li>underline: define uma linha para sublinhar um texto ou palavra.</li>
+                <li>line-thorught: define uma linha riscando o texto.</li>
+                <li>overline: define uma linha acima do texto.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>text-decoration-style:</b> define o tipo de linha que será colocado no texto.
+            <ul>
+                <li>solid: adiciona uma linha contínua ao texto.</li>
+                <li>double: adiciona uma linha dupla.</li>
+                <li>dotted: adiciona uma linha pontilhada ao texto.</li>
+                <li>dashed: adiciona uma linha traçada.</li>
+                <li>wavy: adiciona uma linha ondulada.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>text-decoration-color:</b> define a cor da linha adicionada ao texto.
+            <ul>
+                <li>Segue os sistemas de cores visto anteriormente.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>text-decoration-thickness: </b> define a espessura da linha adicionada ao texto.
+            <ul>
+                <li>Aceita valores em pixels (px).</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>text-ident:</b> define o recuo da primeira linha do texto.
+            <ul>
+                <li>Aceita valores númericos, positivos ou negativos.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>letter-spacing:</b> adiciona espaçamento entre os caracteres de um texto.
+            <ul>
+                <li>normal: não adiciona espaço entre letras. <b>(Padrão)</b></li>
+                <li>Aceita valores numericos, positivos e negativos.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>word-spacing:</b> adiciona espaçamento entre cada palavra de um texto.
+            <ul>
+                <li>normal: não adiciona espaço entre letras. <b>(Padrão)</b></li>
+                <li>Aceita valores numericos, positivos e negativos.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>white-spacing:</b> define como os espaços em branco de um texto serão tratados.
+            <ul>
+                <li>normal: combina sequência de espaços no documento HTML em apenas um espaço e as quebras de texto são realizada no limite do elemento. <b>(Padrão)</b></li>
+                <li>nowrap: combina sequencia de espaços no documento HTML em apenas um espaço e não realiza quebra de texto.</li>
+                <li>pre: preserva sequencia de espaços em branco e as quebras de texto só ocorrem quando há o fim de frases.</li>
+                <li>pre-line: combina sequencia de espaços em branco e realiza quebras de texto ao final de frase e nos limites do elemento.</li>
+                <li>pre-wrap: preserva sequencia de espaços em branco e realiza quebras de texto ao final da frase e nos limites do elemento.</li>
+                <li>break-spaces: faz o mesmo que o pre-wrap, mas quebrao texto quando a sequencia de espaços em branco ultrapassa os limites do elemento.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>word-wrap:</b> define se uma palavra deve ser quebrada entre duas linhas ou se ela deve ser mantida integralmente numa linha só.
+            <ul>
+                <li>normal: não realiza quebra de palavra. <b>(Padrão)</b></li>
+                <li>break-word: quebra a palavra em qualquer caracter para que ela caiba no elemento. Preserva quebra de linhas.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>word-break:</b> define quando no texto deve ter uma quebra de linha.
+            <ul>
+                <li>normal: as quebras de linhas no texto ocorrem quando há um espaço em branco ou hifen. <b>(Padrāo)</b></li>
+                <li>break-all: define que o texto será quebrado em qualquer parte. Não preserva quebra de linhas.</li>
+                <li>keep-all: define que o texto não tenha quebra de linhas.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>writing-mode:</b> define a orientação do texto (vertical ou oriental).
+            <ul>
+                <li>horizontal-tb: define que o texto siga a orientação de leitura horizontal, da esquerda para a direita. <b>(Padrão)</b></li>
+                <li>vertical-rl: define que o texto siga verticalmente, da direita para esquerda.</li>
+                <li>vertical-lr: define que o texto siga verticalmente, da esquerda para direita.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>text-overflow:</b> define como será mostrado ao usuário a existencia de mais conteudo do que ele consegue ver em um container.
+            <ul>
+                <li>clip: o texto é cortado e nenhum outro elemento é adicionado para indicar que há mais conteudo. <b>(Padrão)</b></li>
+                <li>ellipsis: o texto é cortado e é adicionado reticencias para indicar que há mais conteudo num container. </li>
+                <li>string: adiciona um texto personalizado entre aspas ("") para indicar que há mais conteudo num container. Só funciona no Firefox.</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h2>Sombras</h2>
+    <p>No CSS, existem algumas propriedades que permitem que adicionemos sombras em elementos ou textos.</p>
+    <ul>
+        <li>
+            <b>box-shadow:</b> adiciona sombras em elementos gráficos.
+            <ul>
+                <li>Aceita valores para propriedades distintas de sombras, como posição, cor, desfoque e propagação. 
+                    Basta separar por espaço ( ).
+                </li>
+                <li>A sequencia de definição de valores numerico seguirá a seguinte ordem: horizontal, vertical, desfoque, propagação.</li>
+                <li>Aceita valores numericos positivos e negativos.</li>
+                <li>Outset define uma sombra externa <b>(Padrão)</b> e inset define uma sombra interna.</li>
+                <li>Aceita varias camadas de sombra, basta separa-las por virgula (,).</li>
+                <li>Com a propriedade <mark>filter=drop-shadow ( )</mark> é possivel criar sombras dentro de uma imagem, não tratando como um container.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Text-shadow:</b> aplica sombras em textos, caracter por caracter.
+            <ul>
+                <li>Aceita valores para propriedades distintas de sombras, como posição, cor e desfoque. 
+                    Basta separar por espaço ( ).
+                </li>
+                <li>A sequencia de definição de valores numerico seguirá a seguinte ordem: horizontal, vertical e desfoque.</li>
+                <li>Aceita valores numericos positivos e negativos.</li>
+                <li>Aceita varias camadas de sombra, basta separa-las por virgula (,).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Outras propriedades</h2>
+    <ul>
+        <li>
+            <b>Opacity:</b> define a opacidade dos elementos.
+            <ul>
+                <li>Aceita valores numericos decimais de 0.0 a 1.0.</li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <b>Overflow:</b> controla como o conteudo deve ser exibido caso ele ultrapasse os limites de seu container.
+            <ul>
+                <li>visible: o conteudo não é cortado e continua sendo exibido mesmo que ultrapasse o container. <b>(Padrão)</b></li>
+                <li>hidden: o conteudo será cortado e o que estiver fora do container não será exibido.</li>
+                <li>scroll: o conteudo será cortado, mas poderá ser acessado através de um scroll.</li>
+                <li>auto: coloca uma barra de rolagem automaticamente caso o conteudo ultrapasse o container.</li>
+                <li>É necessária a definição de uma altura para que funcione, pois, do contrário, o container crescerá para encapsular o conteudo.</li>
+                <li>Pode definir um scroll vertical ou horizontal independentes, atraves do overflow-x e overflow-y.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Redefinindo propriedades de navegadores</h2>
+    <p>
+        Reset CSS é uma folha de estilos que irá sobrepor todas as propriedades de estilo CSS que os navegadores colocam por padrão nos 
+        elementos, ajudando que nossos projetos tenham o mesmo design em todos os navegadores.
+    </p>
+    <ul>
+        <li>A folha de estilo Reset CSS mais famosa e facilmente encontrada na internet eé de Erik Mayer.</li>
+        <li>Pode-se usar o seletor universal para definir as propriedades que serão resetadas em todos os elementos.</li>
+        <li>Também pode ser usada importando o arquivo reset.css para dentro de um outro arquivo css.</li>
+    </ul>
+    <p>
+        Outra forma de redefinir propriedades dos navegadores é atraves de um normalize, 
+        um documento CSS que padroniza todo estilo inicial de um site. <br>
+        Disponiveis em <a href="https://cdnjs.com/libraries/normalize">Normalize CDNjs</a>. Utilize o link disponivel no head da página.
+    </p>
+
+    <h2>Responsividade</h2>
+    <p>
+        Para ajustar seu layout de acordo com os tamanhos de tela, use @media screen. 
+        Este atalho permite adequar a forma como o conteudo se apresentará na tela dependendo do seu tamanho. 
+        Os principais tamanhos são:
+    </p>
+    <ul>
+        <li>xs (for phones - screens less than 768px wide);</li>
+        <li>sm (for tablets - screens equal to or greater than 768px wide);</li>
+        <li>md (for small laptops - screens equal to or greater than 992px wide);</li>
+        <li>lg (for laptops and desktops - screens equal to or greater than 1200px wide).</li>
+    </ul>
+    <p>Ver <b>Projeto Pokedesk</b> como referencia.</p>
+
+</body>
+</html>
